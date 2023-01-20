@@ -160,7 +160,14 @@ return require("packer").startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 
 	-- additional lsp packages
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
+	-- use({ "glepnir/lspsaga.nvim", branch = "main" })
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+		--		config = function()
+		--	require("lspsaga").setup({})
+		--	end,
+	})
 	use("onsails/lspkind.nvim")
 
 	-- latex syntax check
@@ -176,4 +183,10 @@ return require("packer").startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim")
+
+	-- python autocompletion
+	-- use("davidhalter/jedi-vim")
+	-- use("zchee/deoplete-jedi")
+	-- use("Shougo/context_filetype.vim")
+	-- use("tell-k/vim-autopep8")
 end)
